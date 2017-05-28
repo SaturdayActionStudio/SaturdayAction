@@ -27,15 +27,18 @@ class SaturdayActionView extends Ui.WatchFace {
         var screenWidth = dc.getWidth();
         // Get and show the current time
         var now = Time.now();
-        var clockTime = Gregorian.info(now,Time.FORMAT_SHORT);
+        var clockTime = Gregorian.info(now,Time.FORMAT_MEDIUM);
         if(clockTime.hour > 12) {
         	clockTime.hour = clockTime.hour - 12;
         }
         var timeDisp = Lang.format("$1$ $2$", [clockTime.hour, clockTime.min.format("%02d")]);
-        var timeDate = Lang.format("$1$/$2$", [clockTime.month, clockTime.day]);
+        var timeDay = Lang.format("$1$", [clockTime.day_of_week]);
+        var timeDate = Lang.format("$1$", [clockTime.day]);
         var viewDisp = View.findDrawableById("labelTime");
+        var viewDay = View.findDrawableById("labelDay");
         var viewDate = View.findDrawableById("labelDate");
         viewDisp.setText(timeDisp);
+        viewDay.setText(timeDay);
         viewDate.setText(timeDate);
         
         // Get and show HR

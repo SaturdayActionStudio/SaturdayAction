@@ -1,8 +1,9 @@
 <layout id="WatchFace">
-    <label id="labelDate" x="0" y="center" font="Gfx.FONT_SYSTEM_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE"></label>
+    <label id="labelDay" x="5" y="center" font="Gfx.FONT_SYSTEM_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE"></label>
+    <label id="labelDate" x="235" y="center" font="Gfx.FONT_SYSTEM_SMALL" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE"></label>
     <label id="labelTime" x="center" y="center" font="Gfx.FONT_SYSTEM_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" ></label>
     <label id="labelHR" x="center" y="10" font="Gfx.FONT_SYSTEM_NUMBER_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_LT_GRAY"></label>
     <label id="labelSteps" x="center" y="180" font="Gfx.FONT_SYSTEM_NUMBER_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_LT_GRAY"></label>
-    <label id="labelNotify" x="15" y="152" font="Gfx.FONT_SYSTEM_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_PINK"></label>
-    <label id="labelAlarm" x="225" y="152" font="Gfx.FONT_SYSTEM_TINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_GREEN"></label>
+    <label id="labelNotify" x="20" y="152" font="Gfx.FONT_SYSTEM_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_PINK"></label>
+    <label id="labelAlarm" x="220" y="152" font="Gfx.FONT_SYSTEM_TINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_GREEN"></label>
 </layout>
