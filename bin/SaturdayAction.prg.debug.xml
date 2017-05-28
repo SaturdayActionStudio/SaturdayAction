@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="10" pc="268435456" symbol="initialize"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="11" pc="268435460" symbol="initialize"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="15" pc="268435479" symbol="onLayout"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="16" pc="268435483" symbol="onLayout"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="22" pc="268435521" symbol="onShow"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="26" pc="268435526" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="27" pc="268435530" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="29" pc="268435543" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="30" pc="268435562" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="31" pc="268435595" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="32" pc="268435612" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="34" pc="268435637" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="35" pc="268435711" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="36" pc="268435771" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="37" pc="268435795" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="38" pc="268435819" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="39" pc="268435833" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="42" pc="268435847" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="43" pc="268435871" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="44" pc="268435878" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="45" pc="268435885" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="46" pc="268435898" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="47" pc="268435942" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="50" pc="268435967" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="51" pc="268435991" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="54" pc="268436005" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="55" pc="268436037" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="56" pc="268436044" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="57" pc="268436068" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="58" pc="268436075" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="60" pc="268436101" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="64" pc="268436115" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="65" pc="268436147" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="66" pc="268436171" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="69" pc="268436194" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="70" pc="268436226" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="73" pc="268436242" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="74" pc="268436274" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="75" pc="268436306" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="76" pc="268436322" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="77" pc="268436330" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="79" pc="268436343" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="80" pc="268436367" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="83" pc="268436390" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="84" pc="268436422" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="87" pc="268436441" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="88" pc="268436461" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="89" pc="268436478" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="90" pc="268436489" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="92" pc="268436539" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="94" pc="268436589" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="96" pc="268436628" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="98" pc="268436664" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="99" pc="268436693" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="100" pc="268436704" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="102" pc="268436754" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="104" pc="268436804" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="106" pc="268436843" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="108" pc="268436879" symbol="onUpdate"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="114" pc="268436909" symbol="onHide"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="118" pc="268436914" symbol="onExitSleep"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionView.mc" lineNum="122" pc="268436919" symbol="onEnterSleep"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="5" pc="268436924" symbol="initialize"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="6" pc="268436928" symbol="initialize"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="10" pc="268436947" symbol="onStart"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="14" pc="268436952" symbol="onStop"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="18" pc="268436957" symbol="getInitialView"/>
+<entry filename="/Users/jordan/Documents/workspace/SaturdayAction/source/SaturdayActionApp.mc" lineNum="19" pc="268436961" symbol="getInitialView"/>
+<entry filename="Rez" lineNum="18" pc="268436999" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="20" pc="268437003" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="21" pc="268437151" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="22" pc="268437176" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="23" pc="268437222" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="24" pc="268437385" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="25" pc="268437410" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="26" pc="268437462" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="27" pc="268437508" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="28" pc="268437656" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="29" pc="268437681" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="30" pc="268437733" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="31" pc="268437881" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="32" pc="268437906" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="33" pc="268437958" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="34" pc="268438091" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="37" pc="268438224" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389349" symbol="justification"/>
+<entry field="true" id="8388611" symbol="Toybox"/>
+<entry id="8" object="true" symbol="SaturdayActionView"/>
+<entry id="8388770" module="true" symbol="Strings"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388640" symbol="Lang"/>
+<entry id="8388769" module="true" symbol="Rez"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8388924" symbol="Gregorian"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="13" symbol="AppName"/>
+<entry id="9" object="true" symbol="SaturdayActionApp"/>
+<entry id="8389375" method="true" symbol="WatchFace"/>
+<entry field="true" id="12" symbol="LauncherIcon"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389065" symbol="locY"/>
+<entry id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" symbol="Drawables"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry id="8389348" symbol="font"/>
+<entry id="8389347" symbol="color"/>
+<entry id="11" module="true" symbol="Layouts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8389063" symbol="identifier"/>
+<entry id="10" module="true" symbol="Menus"/>
+<entry id="8388772" module="true" symbol="Fonts"/>
+<entry id="8388633" symbol="ActivityMonitor"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435964" name="showHR" stackId="11" startPc="268435885"/>
+<entry endPc="268436908" name="now" stackId="3" startPc="268435530"/>
+<entry endPc="268436908" name="viewAlarm" stackId="17" startPc="268435530"/>
+<entry endPc="268436908" name="dataMove" stackId="18" startPc="268435530"/>
+<entry endPc="268436908" name="dataBattery" stackId="25" startPc="268435530"/>
+<entry endPc="268436908" name="statusBattery" stackId="24" startPc="268435530"/>
+<entry endPc="268436908" name="viewDisp" stackId="7" startPc="268435530"/>
+<entry endPc="268436908" name="dataSteps" stackId="22" startPc="268435530"/>
+<entry endPc="268436908" name="goalSteps" stackId="21" startPc="268435530"/>
+<entry endPc="268436908" name="countSteps" stackId="20" startPc="268435530"/>
+<entry endPc="268436908" name="viewDate" stackId="8" startPc="268435530"/>
+<entry endPc="268436908" name="clockTime" stackId="4" startPc="268435530"/>
+<entry endPc="268436908" name="dataNotify" stackId="13" startPc="268435530"/>
+<entry endPc="268436908" name="nullNotify" stackId="14" startPc="268435530"/>
+<entry endPc="268436908" name="screenWidth" stackId="2" startPc="268435530"/>
+<entry endPc="268436908" name="dataAlarm" stackId="16" startPc="268435530"/>
+<entry endPc="268436908" name="dataHR" stackId="10" startPc="268435530"/>
+<entry endPc="268436908" name="timeDisp" stackId="5" startPc="268435530"/>
+<entry endPc="268436908" name="viewSteps" stackId="23" startPc="268435530"/>
+<entry endPc="268436908" name="checkHR" stackId="9" startPc="268435530"/>
+<entry endPc="268436908" name="viewHR" stackId="12" startPc="268435530"/>
+<entry endPc="268436908" name="timeDate" stackId="6" startPc="268435530"/>
+<entry endPc="268436908" name="viewNotify" stackId="15" startPc="268435530"/>
+<entry endPc="268436908" name="statusMove" stackId="19" startPc="268435530"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelTime" stackId="4" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelDate" stackId="2" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelDate_fontHeight" stackId="3" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelSteps" stackId="8" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelSteps_fontHeight" stackId="9" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelAlarm" stackId="11" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelHR" stackId="6" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelHR_fontHeight" stackId="7" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelTime_fontHeight" stackId="5" startPc="268437003"/>
+<entry endPc="268438291" name="rez_cmp_local_bitmap_labelNotify" stackId="10" startPc="268437003"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry name="initialize" parent="SaturdayActionView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="SaturdayActionView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onShow" parent="SaturdayActionView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onUpdate" parent="SaturdayActionView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onHide" parent="SaturdayActionView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onExitSleep" parent="SaturdayActionView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onEnterSleep" parent="SaturdayActionView">
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="SaturdayActionApp">
+<documentation/>
+</functionEntry>
+<functionEntry name="onStart" parent="SaturdayActionApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onStop" parent="SaturdayActionApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getInitialView" parent="SaturdayActionApp">
+<documentation/>
+</functionEntry>
+<functionEntry name="WatchFace" parent="Layouts">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
+</functionEntry>
+</functions>
+</debugInfo>
