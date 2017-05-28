@@ -121,10 +121,10 @@ class SaturdayActionView extends Ui.WatchFace {
         	dc.drawBitmap(175, 30, iconBT);
         }
         if(statusNotify > 0) {
-        	dc.drawBitmap(20, 160, iconNotify);
+        	dc.drawBitmap(25, 160, iconNotify);
         }
         if(statusAlarm > 0) {
-        	dc.drawBitmap(205, 160, iconAlarm);
+        	dc.drawBitmap(200, 160, iconAlarm);
         }
     }
 
