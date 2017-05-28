@@ -1,3 +1,7 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="BluetoothIcon" filename="Bluetooth.png" />
+    <bitmap id="DoNotDisturbIcon" filename="DoNotDisturb.png" />
+    <bitmap id="NotifyIcon" filename="Notify.png" />
+    <bitmap id="AlarmIcon" filename="Alarm.png" />
 </drawables>
