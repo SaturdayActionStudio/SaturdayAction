@@ -39,12 +39,13 @@ class SaturdayActionView extends Ui.WatchFace {
         var timeDay = Lang.format("$1$", [clockDay.day_of_week]);
         var timeDate = Lang.format("$1$.$2$", [clockTime.month, clockTime.day]);
         var viewDisp = View.findDrawableById("labelTime");
-        var viewDay = View.findDrawableById("labelDay");
-        var viewDate = View.findDrawableById("labelDate");
-        viewDay.setText(timeDay);
-        viewDate.setText(timeDate);
+        var timeWidth = dc.getTextWidthInPixels(timeDisp, Gfx.FONT_SYSTEM_NUMBER_THAI_HOT);
+        var dateWidth = dc.getTextWidthInPixels(timeDate, Gfx.FONT_SYSTEM_XTINY);
+        var dayWidth = dc.getTextWidthInPixels(timeDay, Gfx.FONT_SYSTEM_XTINY);
+        var dayXvalue = ((((240 - timeWidth) / 2) - dayWidth) / 2);
+        var dateXvalue = 240 - ((((240 - timeWidth) / 2 ) - dateWidth) / 2);
         viewDisp.setText(timeDisp);
-        
+                
         // Get and show HR
         var checkHR = ActivityMonitor.getHeartRateHistory(1,true);
         var dataHR = "--";
@@ -52,10 +53,11 @@ class SaturdayActionView extends Ui.WatchFace {
        		var showHR = checkHR.next();
         	if(showHR != null && showHR.heartRate != null && showHR != ActivityMonitor.INVALID_HR_SAMPLE) {
         		dataHR = showHR.heartRate.toString();
-        		}
         	}
+        }
         var viewHR = View.findDrawableById("labelHR");
         viewHR.setText(dataHR);
+        var hrWidth = dc.getTextWidthInPixels(dataHR, Gfx.FONT_SYSTEM_NUMBER_MEDIUM);
         
         //Get do not disturb status
         var iconDND = Ui.loadResource(Rez.Drawables.DoNotDisturbIcon);
@@ -71,7 +73,6 @@ class SaturdayActionView extends Ui.WatchFace {
         
         //Get move bar status
         var dataMove = ActivityMonitor.getInfo().moveBarLevel.toNumber();
-        var statusMove = (dataMove*24)+60;
         
         //Get and show steps
         var countSteps = ActivityMonitor.getInfo().steps.toNumber();
@@ -103,29 +104,49 @@ class SaturdayActionView extends Ui.WatchFace {
         } else {
         	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
         }
-        dc.drawLine(20, 70, dataBattery, 70);
+        dc.drawLine(20, 70, dataBattery, 70);        
         if (dataMove > 4) {
-        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-        } else if (dataMove > 3) {
-        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
-        } else if (dataMove > 2) {
+        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(60, 165, 105, 165);
         	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(115, 165, 130, 165);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(140, 165, 155, 165);
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(165, 165, 180, 165);
+        } else if (dataMove > 3) {
+        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(60, 165, 105, 165);
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(115, 165, 130, 165);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(140, 165, 155, 165);
+        } else if (dataMove > 2) {
+        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(60, 165, 105, 165);
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(115, 165, 130, 165);
         } else {
         	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        }
-        dc.drawLine(60, 165, statusMove, 165);
+        	dc.drawLine(60, 165, 105, 165);
+        }        
         if(statusDND == true) {
-        	dc.drawBitmap(50, 30, iconDND);
+        	var DNDXvalue = ((((158 - hrWidth) / 2) - 15) / 2) + 41;
+        	dc.drawBitmap(DNDXvalue, 30, iconDND);
         }
         if(statusBT == true) {
-        	dc.drawBitmap(175, 30, iconBT);
+            var BTXvalue = 240 - (((((158 - hrWidth) / 2) + 15) / 2) + 41);
+        	dc.drawBitmap(BTXvalue, 30, iconBT);
         }
         if(statusNotify > 0) {
-        	dc.drawBitmap(25, 160, iconNotify);
+        	dc.drawBitmap(30, 160, iconNotify);
         }
         if(statusAlarm > 0) {
-        	dc.drawBitmap(200, 160, iconAlarm);
+        	dc.drawBitmap(195, 160, iconAlarm);
         }
+        dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(dayXvalue, 107, Gfx.FONT_SYSTEM_XTINY, timeDay, Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(dateXvalue, 107, Gfx.FONT_SYSTEM_XTINY, timeDate, Gfx.TEXT_JUSTIFY_RIGHT);
     }
 
     // Called when this View is removed from the screen. Save the
