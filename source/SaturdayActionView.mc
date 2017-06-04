@@ -4,28 +4,22 @@ using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.ActivityMonitor as ActivityMonitor;
-
 class SaturdayActionView extends Ui.WatchFace {
-
     function initialize() {
         WatchFace.initialize();
     }
-
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
     }
-
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
     }
-
     // Update the view
     function onUpdate(dc) {
         var screenWidth = dc.getWidth();
-        
         // Get and show the current time, day, date
         var now = Time.now();
         var clockDay = Gregorian.info(now,Time.FORMAT_MEDIUM);
@@ -45,35 +39,29 @@ class SaturdayActionView extends Ui.WatchFace {
         var dayXvalue = ((((240 - timeWidth) / 2) - dayWidth) / 2);
         var dateXvalue = 240 - ((((240 - timeWidth) / 2 ) - dateWidth) / 2);
         viewDisp.setText(timeDisp);
-                
         // Get and show HR
         var checkHR = ActivityMonitor.getHeartRateHistory(1,true);
         var dataHR = "--";
-        if(checkHR != null) {
+        if(checkHR != null && checkHR != 255) {
        		var showHR = checkHR.next();
-        	if(showHR != null && showHR.heartRate != null && showHR != ActivityMonitor.INVALID_HR_SAMPLE) {
+        	if(showHR != null && showHR.heartRate != null && showHR != ActivityMonitor.INVALID_HR_SAMPLE && showHR != 255) {
         		dataHR = showHR.heartRate.toString();
         	}
         }
         var viewHR = View.findDrawableById("labelHR");
         viewHR.setText(dataHR);
         var hrWidth = dc.getTextWidthInPixels(dataHR, Gfx.FONT_SYSTEM_NUMBER_MEDIUM);
-        
         //Get do not disturb status
         var iconDND = Ui.loadResource(Rez.Drawables.DoNotDisturbIcon);
         var statusDND = Sys.getDeviceSettings().doNotDisturb;
-                
         //Get notification status
         var iconNotify = Ui.loadResource(Rez.Drawables.NotifyIcon);
         var statusNotify = Sys.getDeviceSettings().notificationCount.toNumber();
-        
         //Get alarm status
         var iconAlarm = Ui.loadResource(Rez.Drawables.AlarmIcon);
         var statusAlarm = Sys.getDeviceSettings().alarmCount.toNumber();
-        
         //Get move bar status
         var dataMove = ActivityMonitor.getInfo().moveBarLevel.toNumber();
-        
         //Get and show steps
         var countSteps = ActivityMonitor.getInfo().steps.toNumber();
         var goalSteps = ActivityMonitor.getInfo().stepGoal.toNumber();
@@ -83,15 +71,12 @@ class SaturdayActionView extends Ui.WatchFace {
         }
         var viewSteps = View.findDrawableById("labelSteps");
         viewSteps.setText(countSteps.toString());
-        
         //Get battery status
         var statusBattery = Sys.getSystemStats().battery.toNumber();
         var dataBattery = (screenWidth-20)*statusBattery/100;
-        
         //Get Bluetooth status
         var iconBT = Ui.loadResource(Rez.Drawables.BluetoothIcon);
         var statusBT = Sys.getDeviceSettings().phoneConnected;
-                                
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         dc.setPenWidth(5);
@@ -104,38 +89,34 @@ class SaturdayActionView extends Ui.WatchFace {
         } else {
         	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
         }
-        dc.drawLine(20, 70, dataBattery, 70);        
-        if (dataMove > 4) {
+        dc.drawLine(20, 70, dataBattery, 70);
+        if (dataMove > 1) {
         	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
         	dc.drawLine(60, 165, 105, 165);
+        }  
+        if (dataMove > 2) {
         	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
         	dc.drawLine(115, 165, 130, 165);
+        }  
+        if (dataMove > 3) {
         	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
         	dc.drawLine(140, 165, 155, 165);
+        }  
+        if (dataMove > 4) {
         	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
         	dc.drawLine(165, 165, 180, 165);
-        } else if (dataMove > 3) {
+        }   
+        if (dataMove > 0) {
+        	dc.setPenWidth(1);
         	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(60, 165, 105, 165);
-        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(115, 165, 130, 165);
-        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(140, 165, 155, 165);
-        } else if (dataMove > 2) {
-        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(60, 165, 105, 165);
-        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(115, 165, 130, 165);
-        } else {
-        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(60, 165, 105, 165);
-        }        
+        	dc.drawLine(60, 165, 85, 165);
+        }            
         if(statusDND == true) {
         	var DNDXvalue = ((((158 - hrWidth) / 2) - 15) / 2) + 41;
         	dc.drawBitmap(DNDXvalue, 30, iconDND);
         }
         if(statusBT == true) {
-            var BTXvalue = 240 - (((((158 - hrWidth) / 2) + 15) / 2) + 41);
+            var BTXvalue = 240 - (((((158 - hrWidth) / 2) + 15) / 2) + 41 - 2);
         	dc.drawBitmap(BTXvalue, 30, iconBT);
         }
         if(statusNotify > 0) {
@@ -148,19 +129,15 @@ class SaturdayActionView extends Ui.WatchFace {
         dc.drawText(dayXvalue, 107, Gfx.FONT_SYSTEM_XTINY, timeDay, Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawText(dateXvalue, 107, Gfx.FONT_SYSTEM_XTINY, timeDate, Gfx.TEXT_JUSTIFY_RIGHT);
     }
-
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() {
     }
-
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
     }
-
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
     }
-
 }
