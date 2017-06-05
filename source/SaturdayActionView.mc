@@ -64,53 +64,84 @@ class SaturdayActionView extends Ui.WatchFace {
         var dataMove = ActivityMonitor.getInfo().moveBarLevel.toNumber();
         //Get and show steps
         var countSteps = ActivityMonitor.getInfo().steps.toNumber();
-        var goalSteps = ActivityMonitor.getInfo().stepGoal.toNumber();
-        var dataSteps = (screenWidth-10)*countSteps/goalSteps;
-        if(dataSteps > screenWidth) {
-        	dataSteps = screenWidth-10;
-        }
         var viewSteps = View.findDrawableById("labelSteps");
         viewSteps.setText(countSteps.toString());
         //Get battery status
         var statusBattery = Sys.getSystemStats().battery.toNumber();
-        var dataBattery = (screenWidth-20)*statusBattery/100;
+        var dataBattery = (statusBattery * 2) + 20;
         //Get Bluetooth status
         var iconBT = Ui.loadResource(Rez.Drawables.BluetoothIcon);
         var statusBT = Sys.getDeviceSettings().phoneConnected;
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         dc.setPenWidth(5);
-        if (statusBattery > 75) {
-        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        } else if (statusBattery > 50) {
-        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
-        } else if (statusBattery > 25) {
-        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
-        } else {
+        if (statusBattery < 10) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, dataBattery, 70);
+        } else if (statusBattery < 25) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, 30, 70);
         	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-        }
-        dc.drawLine(20, 70, dataBattery, 70);
-        if (dataMove > 1) {
+        	dc.drawLine(40, 70, dataBattery, 70);
+        } else if (statusBattery < 45) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, 30, 70);
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(40, 70, 60, 70);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(70, 70, dataBattery, 70);
+        } else if (statusBattery < 65) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, 30, 70);
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(40, 70, 60, 70);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(70, 70, 100, 70);
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(110, 70, dataBattery, 70);
+        } else if (statusBattery < 100) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, 30, 70);
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(40, 70, 60, 70);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(70, 70, 100, 70);
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(110, 70, 140, 70);
         	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(60, 165, 105, 165);
+        	dc.drawLine(150, 70, dataBattery, 70);
+        } else {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(20, 70, 30, 70);
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(40, 70, 60, 70);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(70, 70, 100, 70);
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(110, 70, 140, 70);
+        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(150, 70, 220, 70);
+        }
+        if (dataMove > 0) {
+        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(60, 165, 95, 165);
+        }  
+        if (dataMove > 1) {
+        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(105, 165, 120, 165);
         }  
         if (dataMove > 2) {
-        	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(115, 165, 130, 165);
+        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(130, 165, 145, 165);
         }  
         if (dataMove > 3) {
-        	dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(140, 165, 155, 165);
-        }  
-        if (dataMove > 4) {
         	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(165, 165, 180, 165);
+        	dc.drawLine(155, 165, 165, 165);
         }   
-        if (dataMove > 0) {
-        	dc.setPenWidth(1);
-        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        	dc.drawLine(60, 165, 85, 165);
-        }            
+        if (dataMove > 4) {
+        	dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
+        	dc.drawLine(175, 165, 180, 165);
+        } 
         if(statusDND == true) {
         	var DNDXvalue = ((((158 - hrWidth) / 2) - 15) / 2) + 41;
         	dc.drawBitmap(DNDXvalue, 30, iconDND);
